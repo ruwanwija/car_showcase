@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { footerLinks } from "@/constants";
+import { footerLinks } from "@constants";
 
 const Footer = () => (
   <footer className='flex flex-col text-black-100  mt-5 border-t border-gray-100'>
@@ -15,7 +15,7 @@ const Footer = () => (
       </div>
 
       <div className="footer__links">
-        {footerLinks.map((item: { title: string; links: { title: string; url: string }[] }) => (
+        {footerLinks.map((item) => (
           <div key={item.title} className="footer__link">
             <h3 className="font-bold">{item.title}</h3>
             <div className="flex flex-col gap-5">
